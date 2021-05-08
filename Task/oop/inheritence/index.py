@@ -1,4 +1,4 @@
-# Inheritance
+
 
 class Car:
   
