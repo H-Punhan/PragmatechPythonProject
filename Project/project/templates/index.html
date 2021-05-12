@@ -7,15 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-   <form action='./add' method='POST'>
-    <input type="text" >
+   <form action="add/" method='POST'>
+    {% csrf_token %} 
+    <input type="text" name='name' >
     <button type="submit">add</button>
     </form>
    <div>
 
    {% for i in data %}
-    <h2>{{i.name}}</h2>
-
+    <h2><a href='/user/{{i.id}}'>{{i.name}} </a><a href='/update/{{i.id}}'>update </a><a href="/delete/{{i.id}}">delete</a></h2>
     {% endfor %}
 </div>
 </body>

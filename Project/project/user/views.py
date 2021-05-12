@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect
+from django.http import HttpResponse
 from .models import *
 
 def index(request):
@@ -7,9 +8,33 @@ def index(request):
 
 def add(request):
     if request.method=='POST':
-        u=User(name='Punhan')
+        u=User(name=request.POST['name'])
         u.save()
     return redirect(index)
 
+def read(request,id):
+
+    data=User.objects.get(id=id)
     
+    return render(request,'read.html',{'data':data})
+
+def update(request,id):
+
+    data=User.objects.get(id=id)
+
+    if request.method=='POST':
+        u=User.objects.get(id=id)
+        u.name=request.POST['name']
+        u.save()
+        return redirect(index)
+    
+    return render(request,'update.html',{'data':data})
+
+
+def delete(request,id):
+    
+    data=User.objects.get(id=id).delete()
+        
+    return redirect(index)
+
     
