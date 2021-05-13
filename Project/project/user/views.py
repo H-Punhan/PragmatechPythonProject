@@ -30,11 +30,20 @@ def update(request,id):
     
     return render(request,'update.html',{'data':data})
 
-
 def delete(request,id):
     
     data=User.objects.get(id=id).delete()
         
     return redirect(index)
 
+
+def addimage(request):
+    dataimg=User.objects.all()
+    images=Images.objects.all()
+    if request.method=='POST':
+        data=Images(name='sekil',user_id_id=int(request.POST['img']))
+        data.save()
+        return redirect(addimage)
+
     
+    return render(request,'images.html',{'data':dataimg,'data2':images})

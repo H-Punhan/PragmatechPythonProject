@@ -25,5 +25,6 @@ urlpatterns = [
     path('user/<id>',read),
     path('add/',add),
     path('delete/<id>',delete),
-    path('update/<id>',update)
+    path('update/<id>',update),
+    path('addimage/',addimage)
 ]
