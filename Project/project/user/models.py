@@ -1,16 +1,9 @@
 from django.db import models
-from django.db.models.fields import CharField, IntegerField
+from django.db.models.fields import CharField, IntegerField,TextField
 
 
-
-class User(models.Model):
-    name=models.CharField(max_length=25)
-    
-class Images(models.Model):
-    name=models.CharField(max_length=25)
-    user_id=models.ForeignKey(User,on_delete=models.CASCADE)
-
-
-
+class Todos(models.Model):
+    title=models.CharField(max_length=25)
+    content=models.TextField()
 
 # Create your models here.
