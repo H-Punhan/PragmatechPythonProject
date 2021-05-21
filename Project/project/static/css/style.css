@@ -2,46 +2,83 @@
     margin:0px;
     padding:0px;
     box-sizing: border-box;
+    font-family: roboto;
+    text-decoration: none;
 }
 
-#todo,#todos{
-    width:20%;
+#add-header{
+    width:50%;
     margin:auto;
-    background-color: whitesmoke;
-    padding:10px;
+    display: flex;
+    flex-direction: column;
     margin-top:20px;
-}
-
-#todo input{
-    width:80%;
 
 }
+#add-header input,textarea,button{
+    padding: 10px;
+    border:1px solid black;
+    border-radius: 5px;
+    width:100%
 
-#todo button{
-    width:18%;
+
+}
+
+#todos{
+    width:50%;
+    margin:auto;
+    max-height: 350px;
+    background-color: whitesmoke;
+    padding:20px;
+    margin-top:20px;
+    overflow-y: auto;
+    
+
+}
+.todo-item{
+    width:100%;
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+    
+    
+   
     
 }
-#todos{
-    max-height: 400px;
-    overflow-y: auto;
+.todo-item a{
+ 
+    
+   
+    color:black;
+}
+.todo-item div a{
+ 
+    
+   
+    color:blue;
+    border:1px solid blue;
+    border-radius: 10px;
+    padding:5px 20px;
 }
 
-#todos ul li{
-    list-style: none;
-    padding:5px;
-    width:100%;
-    margin-top:10px;
-    background-color: tomato;
-    color:white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+
+.span{
+    
+    width:20px;
+    height:20px;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
 }
-#todos ul a{
-    text-decoration: none;
-    color:tomato;
+
+#post{
+    width:50%;
+    margin:auto;
+
     background-color: whitesmoke;
-    padding:2px;
+    padding:20px;
+    margin-top:20px;
+    
 
 }
