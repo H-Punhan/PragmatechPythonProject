@@ -5,12 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
 </head>
-<body>
-    <div style='width:80%;margin:auto;'>
-        <h2>{{data.title}}</h2>
-        <p>{{data.content}}</p>
 
+<body>
+    <div id="row">
+
+
+        <div style='width:100%'>
+            <h2>{{data.title}}</h2>
+            <p>{{data.content}}</p>
+
+        </div>
+        <form action="/add/comment/{{data.id}}" method='POST' style="display: flex;flex-direction: column;">
+            {% csrf_token %}
+            <input type="text" placeholder="name" name='name'></br>
+            <input type="email" placeholder="email" name='email'></br>
+            <textarea name="comment" id="" cols="30" rows="10"
+            placeholder="comment"></textarea></br>
+            <button type="submit">submit</button>
+        </form>
+
+        <div id="comments">
+            <h1>Comments</h1>
+            {% for i in comments %}
+            <div class="comment-item">
+                <h5>{{i.name}}</h5>
+                <p>{{i.comment}}</p>
+            </div>
+            {% endfor %}
+        </div>
     </div>
+
+
 </body>
+
 </html>

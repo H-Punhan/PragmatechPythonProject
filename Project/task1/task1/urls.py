@@ -25,6 +25,7 @@ urlpatterns = [
     path('add/',create),
     path('post/<id>',read),
     path('update/<id>',update),
-    path('delete/<id>',delete)
+    path('delete/<id>',delete),
+    path('add/comment/<id>',addcomment),
 ]
 static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
