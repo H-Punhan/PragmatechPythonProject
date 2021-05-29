@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.auth import logout
 from django.urls import path
 from blog.views import *
 
@@ -27,5 +28,9 @@ urlpatterns = [
     path('update/<id>',update),
     path('delete/<id>',delete),
     path('add/comment/<id>',addcomment),
+    path('login/',userlogin),
+    path('test/',test),
+    path('logout/',logoutuser),
+    
 ]
 static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
