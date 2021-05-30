@@ -29,8 +29,11 @@ urlpatterns = [
     path('delete/<id>',delete),
     path('add/comment/<id>',addcomment),
     path('login/',userlogin),
+    path('register/',userregister),
     path('test/',test),
     path('logout/',logoutuser),
+    path('user/<username>',usersprofile),
+
     
 ]
 static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

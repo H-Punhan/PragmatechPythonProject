@@ -1,6 +1,9 @@
 *{
     font-family: roboto;
     box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+    list-style: none;;
 }
 
 #row{
@@ -8,6 +11,7 @@
     padding:15px 0px;
     margin:auto;
     word-wrap: break-word;
+   
     
 }
 #comments{
@@ -19,4 +23,14 @@
     background-color: whitesmoke;
     padding:5px;
 
+}
+
+.part{
+    width:50%;
+    padding:10px;
+}
+#header{
+    width:80%;
+    margin:auto;
+    margin-top:20px;
 }

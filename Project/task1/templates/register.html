@@ -7,19 +7,17 @@
     <title>Document</title>
     {% load static %}
     <link rel="stylesheet" href="{% static "style.css"%}">
-</head>
+</head> 
 <body>
-    
-    
-    <div id='row'>
-        <form action="/login/" method="POST">
+    <div id="row">
+        
+        <form action="/register/" method="post">
             {% csrf_token %}
-            <input type="text" name='username'>
-            <input type="text" name='password'>
-            <button type="submit">submit</button>
+        <input type="text" name='username'></br>
+        <input type="password" name='password'></br>
+        <input type="password" name='passagain'></br>
+        <button type='submit'>create user</button>
         </form>
-        <a href="/register">Create account</a>
     </div>
-    
 </body>
 </html>

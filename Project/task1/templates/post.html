@@ -19,8 +19,7 @@
         </div>
         <form action="/add/comment/{{data.id}}" method='POST' style="display: flex;flex-direction: column;">
             {% csrf_token %}
-            <input type="text" placeholder="name" name='name'></br>
-            <input type="email" placeholder="email" name='email'></br>
+            
             <textarea name="comment" id="" cols="30" rows="10"
             placeholder="comment"></textarea></br>
             <button type="submit">submit</button>

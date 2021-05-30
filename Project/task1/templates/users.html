@@ -27,29 +27,12 @@
             <div
                 style="width:100%;padding:10px;background-color:whitesmoke;margin-top:10px;font-size: 40px; display: flex;justify-content: space-between;">
                 <a href="/post/{{i.id}}">{{i.title}}</a>
-                <div>
-
-                    <a href="delete/{{i.id}}">delete</a>
-                    <a href="update/{{i.id}}">update</a>
-
-                </div>
+                
             </div>
             {% endfor %}
         </div>
-        <div class="part">
-            <ul>
-                
-            
-            {% for i in users %}
-                
-                
-                <li><a href="/user/{{i.username}}">{{i.username}}</a></li> 
-                
+        
 
-            {% endfor %}
-            </ul>
-
-        </div>
     </div>
 
 </body>
