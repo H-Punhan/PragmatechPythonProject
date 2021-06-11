@@ -44,12 +44,6 @@ fruits=[
             'price':10
         }
     ]
- 
-def showfruits():
-    for i in range(0,len(fruits)):
-        print(f'{i}-{fruits[i]["fruit"]}')
-    select=input('select fruit-')
-    print(selectfruit(select))
 
 def selectfruit(fruit):
     result=False
@@ -59,6 +53,12 @@ def selectfruit(fruit):
             return i['price']
     if result==False:
         return 'not founding fruit'
+
+def showfruits():
+    for i in range(0,len(fruits)):
+        print(f'{i}-{fruits[i]["fruit"]}')
+    select=input('select fruit-')
+    print(selectfruit(select))
 
 
 #4
