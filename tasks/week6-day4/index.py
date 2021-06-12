@@ -1,9 +1,10 @@
 #1
 
 class Car:
-    def __init__(self,mark,brand) -> None:
-        self.mark=mark
+    def __init__(self,model,brand) -> None:
+        self.model=model
         self.brand=brand
+
 
 c=Car('bmw',400)
 
