@@ -33,7 +33,7 @@ def toUpperletter():
 def writesep():
     print('Baku','Sumqayit','Samaxi','Gence',sep=' ')
 
-writesep()
+
 #4 
 
 def reverseWord(text):
@@ -80,4 +80,30 @@ def writepower():
 
     print(xresult,yresult)
 
-writepower()
+
+#10 
+def findWord(word):
+    text='Nineteet Eighty-Four does not present "art-as-culture" but "art-as-function". Orwell like Marcel Proust fears that the habit of conforming to the force benumbs sensations and erases the perception of the world. Technological totalitarianism alienates senses, controls human behaviour and leads to linguistic degradation'
+    text=text.split(' ')
+    isFind=False
+  
+    for i in text:
+        if word==i:
+            isFind=True
+    if isFind==True:
+        return f"{word} tapildi"
+    else:
+        return 'tapilmadi'
+
+# print(findWord('text'))
+
+#11
+def oddNumber():
+    x=9
+    if x<10 or x%2!=0:
+        print('not okay')
+    elif x>10 and x%2==0:
+        print('okay')
+    elif x<10 and x%2!=0:
+        print('bad')
+oddNumber()

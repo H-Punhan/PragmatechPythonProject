@@ -14,6 +14,8 @@ class Restoran:
             print('aciqdeyil')
 
 r=Restoran('Lorem','ipsum')
+r.newword='a'
+print(r.newword)
 r.describe()
 r.openrestoran()
 r=Restoran('Lore','ipsu')
