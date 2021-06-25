@@ -1,0 +1,34 @@
+/**
+ * Theme Name: Construction - Ultimate Construction Template
+ * Theme by BlogWP
+ * Created: Thursday, October 28, 2016
+ */
+
+/* v2.0 */
+
+- Added full pages
+
+
+/* v1.4 */
+
+- Added auto-clearfix css for row and container.
+
+
+/* v1.3 */
+
+- Added Portfolio Single page.
+
+
+/* v1.2 */
+
+- Added Home, Services, About, Contact, Portfolio pages.
+
+
+/* v1.1 */
+
+- Added Blog pages.
+
+
+/* v1.0 */
+
+- initial release
